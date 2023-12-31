@@ -1,0 +1,45 @@
+// Global Imports
+@import "./base/reset";
+@import "./variables/colors";
+// Typography
+@import "./base/typography";
+
+// Mixins
+@import "./mixins/mixins";
+
+// Layout Imports
+@import "./layout/Hero";
+@import "./layout/Navigation";
+@import "./layout/Category.scss";
+@import "./layout/ProductDetails";
+@import "./layout/ProductSection.scss";
+
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: auto;
+}
+
+body {
+  font-family: $font-primary;
+  width: 100%;
+
+  margin: auto;
+  background: #000000 !important;
+}
+
+// GENERAL STYLES
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}

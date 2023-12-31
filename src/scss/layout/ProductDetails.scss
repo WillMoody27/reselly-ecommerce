@@ -1,0 +1,14 @@
+.product-details {
+  background: $white-color;
+  display: flex;
+  flex-direction: column;
+
+  &__spacer {
+    height: 122.09px; // Takes into account the height of the navigation
+    background: red;
+  }
+
+  &__container {
+    height: calc(100vh - 122.09px);
+  }
+}

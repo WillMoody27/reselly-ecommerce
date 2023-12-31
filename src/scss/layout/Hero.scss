@@ -1,0 +1,93 @@
+.hero {
+  // background: orange;
+  &__container {
+    // background-color: red;
+    color: $white-color;
+    position: relative;
+    height: 100vh;
+    max-width: 1440px;
+    // background: red;
+
+    .hero--left-content {
+      // background: green;
+      position: absolute;
+      top: 50%;
+      left: 10%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      text-align: center;
+      z-index: 100;
+
+      @media only screen and (max-width: 768px) {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        padding: 0 1rem;
+        font-size: 0.8rem;
+      }
+
+      &__item--promo {
+        font-size: 1.2rem;
+        font-weight: 200;
+        color: yellow;
+      }
+
+      &__item--name {
+        font-size: 2rem;
+        font-weight: 700;
+      }
+      &__item--condition-button {
+        display: flex;
+        padding: 0.5rem 1rem;
+        background: none;
+        border: 2px solid $white-color;
+        font-weight: 200;
+        letter-spacing: 1px;
+        border-radius: 50px;
+        color: $white-color;
+        margin: auto;
+        font-size: 1rem;
+      }
+
+      &__message--cta {
+        font-size: 3.5em;
+        max-width: 700px;
+        font-weight: 900;
+        color: $white-color;
+        margin: auto;
+      }
+      &__item--link {
+        font-size: 2rem;
+        font-weight: 200;
+      }
+    }
+    .hero--right-image {
+      // background: red;
+      object-fit: contain;
+      max-width: 100%;
+      min-width: 300px;
+      display: flex;
+
+      padding-top: 200px;
+      // move image to the right
+      margin-left: auto;
+      opacity: 1;
+      transition: opacity 0.25s ease-in-out;
+
+      @media screen and (max-width: 1200px) {
+        opacity: 0.5;
+      }
+      @media screen and (max-width: 768px) {
+        margin-left: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 50;
+      }
+    }
+  }
+}
