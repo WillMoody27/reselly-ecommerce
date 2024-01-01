@@ -1,18 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation, Link } from "react-router-dom";
 import SectionComponent from "./SectionComponent";
 import { clothingDb } from "../../js/products";
 
 const ProductDetails = () => {
   const location = useLocation();
-  const { product } = location.state || {};
+
+  const [product, setProduct] = useState(null);
+
+  useEffect(() => {
+    const storedProduct = localStorage.getItem("product");
+    if (storedProduct) {
+      setProduct(JSON.parse(storedProduct));
+    } else {
+      const { product } = location.state || {};
+      if (product) {
+        localStorage.setItem("product", JSON.stringify(product));
+        setProduct(product);
+      }
+    }
+  }, [location.state]);
 
   if (!product) {
-    // Handle the case where location.state or product is undefined
     return (
       <div>
         <p>Product details not found!</p>
-        {/* You can add a link or other content to redirect users */}
         <Link to="/">Go back to Home</Link>
       </div>
     );
