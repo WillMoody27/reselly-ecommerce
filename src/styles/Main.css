@@ -368,7 +368,7 @@
   background: green;
 }
 .product-details__container {
-  height: calc(auto - 122.09px);
+  height: calc(100% - 122.09px);
   max-width: 1440px;
   width: 100%;
   margin: auto;
