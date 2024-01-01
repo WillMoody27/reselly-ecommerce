@@ -1,16 +1,14 @@
+@import "../variables/colors";
+@import "../base/typography";
+
 .copy {
   bottom: 0;
   padding: 0.5rem 1rem;
-  background: $black-color;
-  color: $white-color;
-  font-size: 1rem;
+  color: #fff;
   text-align: center;
   font-family: $font-primary;
-  font-weight: 300;
-}
 
-@media screen and (max-width: 678px) {
-  .copy {
-    font-size: 1rem;
+  @media screen and (max-width: 678px) {
+    font-size: 0.8rem;
   }
 }

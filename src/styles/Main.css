@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -758,19 +759,16 @@
 .copy {
   bottom: 0;
   padding: 0.5rem 1rem;
-  background: #222222;
-  color: #ffffff;
-  font-size: 1rem;
+  color: #fff;
   text-align: center;
   font-family: "Roboto", sans-serif, Roboto, Arial, Helvetica;
-  font-weight: 300;
 }
-
 @media screen and (max-width: 678px) {
   .copy {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
+
 html {
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;

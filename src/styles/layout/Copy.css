@@ -1,17 +1,15 @@
-/* Error: Undefined variable.
- *   ,
- * 4 |   background: $black-color;
- *   |               ^^^^^^^^^^^^
- *   '
- *   src/scss/layout/Copy.scss 4:15  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a   \2577 \a 4 \2502    background: $black-color;\a   \2502                ^^^^^^^^^^^^\a   \2575 \a   src/scss/layout/Copy.scss 4:15  root stylesheet";
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+.copy {
+  bottom: 0;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  text-align: center;
+  font-family: "Roboto", sans-serif, Roboto, Arial, Helvetica;
 }
+@media screen and (max-width: 678px) {
+  .copy {
+    font-size: 0.8rem;
+  }
+}
+
+/*# sourceMappingURL=Copy.css.map */
