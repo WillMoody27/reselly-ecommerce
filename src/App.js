@@ -6,6 +6,7 @@ import "./styles/Main.css";
 import Layout from "./components/layout/Layout";
 import ProductDetails from "./components/layout/ProductDetails";
 import Navigation from "./components/layout/Navigation";
+import Copy from "./components/layout/copy/Copy";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/product/:id" element={<ProductDetails />} />
         </Routes>
       </div>
+      <Copy />
     </Router>
   );
 }
