@@ -7,6 +7,29 @@ const ProductDetails = () => {
   //   const { id } = useParams();
   const location = useLocation();
   const { product } = location.state;
+
+  useEffect(() => {
+    if (!product) {
+      // Handle the case where product is null
+      // For example, you can redirect to the home page
+      window.location.href = "/"; // Redirect to the home page
+      // Or load content from localStorage if required
+      // const savedProduct = JSON.parse(localStorage.getItem("savedProduct"));
+      // Perform actions with savedProduct...
+    }
+  }, [product]);
+
+  if (!product) {
+    // If still no product after redirecting, render a message or link
+    return (
+      <div>
+        <p>Product details not found!</p>
+        {/* You can add a link or other content to redirect users */}
+        <Link to="/">Go back to Home</Link>
+      </div>
+    );
+  }
+
   const {
     listed,
     user: {
