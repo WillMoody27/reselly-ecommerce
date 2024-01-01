@@ -1,36 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useLocation, Link } from "react-router-dom";
 import SectionComponent from "./SectionComponent";
 import { clothingDb } from "../../js/products";
 
 const ProductDetails = () => {
+  //   const { id } = useParams();
   const location = useLocation();
-
-  const [product, setProduct] = useState(null);
-
-  useEffect(() => {
-    const storedProduct = localStorage.getItem("product");
-    if (storedProduct) {
-      setProduct(JSON.parse(storedProduct));
-    } else {
-      const { product } = location.state || {};
-      if (product) {
-        localStorage.setItem("product", JSON.stringify(product));
-        setProduct(product);
-      }
-    }
-  }, [location.state]);
-
-  if (!product) {
-    return (
-      <div>
-        <p>Product details not found!</p>
-        <Link to="/">Go back to Home</Link>
-      </div>
-    );
-  }
-
-  // Extracting product details
+  const { product } = location.state;
   const {
     listed,
     user: {
@@ -44,7 +20,10 @@ const ProductDetails = () => {
     title,
     price,
     details: { imageUrl, description, condition, brand, model, category },
+    // location: loc,
   } = product;
+  console.log(product);
+  console.log(isVerified);
 
   return (
     <div className="product-details">
