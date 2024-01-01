@@ -1,6 +1,4 @@
 import React from "react";
-import Hero from "./components/layout/Hero";
-import Category from "./components/layout/Category";
 // react router
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 

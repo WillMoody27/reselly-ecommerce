@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import { useParams, useLocation, Link } from "react-router-dom";
+import React from "react";
+import { useLocation, Link } from "react-router-dom";
 import SectionComponent from "./SectionComponent";
 import { clothingDb } from "../../js/products";
 
 const ProductDetails = () => {
-  const { id } = useParams();
+  //   const { id } = useParams();
   const location = useLocation();
   const { product } = location.state;
   const {
@@ -20,7 +20,7 @@ const ProductDetails = () => {
     title,
     price,
     details: { imageUrl, description, condition, brand, model, category },
-    location: loc,
+    // location: loc,
   } = product;
   console.log(product);
   console.log(isVerified);

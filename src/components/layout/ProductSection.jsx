@@ -1,6 +1,6 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
-import React, { useState } from "react";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
+import React from "react";
 // get the data from export.js
 import { electronicsDb, clothingDb } from "../../js/products";
 
