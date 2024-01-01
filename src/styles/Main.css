@@ -94,6 +94,7 @@
   color: #ffffff;
   font-family: "Roboto", sans-serif, Roboto, Arial, Helvetica !important;
   position: fixed;
+  top: 0;
   width: 100%;
   z-index: 1000;
   background: #000000;
@@ -754,6 +755,22 @@
   cursor: pointer;
 }
 
+.copy {
+  bottom: 0;
+  padding: 0.5rem 1rem;
+  background: #222222;
+  color: #ffffff;
+  font-size: 1rem;
+  text-align: center;
+  font-family: "Roboto", sans-serif, Roboto, Arial, Helvetica;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 678px) {
+  .copy {
+    font-size: 1rem;
+  }
+}
 html {
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
