@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useLocation, Link } from "react-router-dom";
 import SectionComponent from "./SectionComponent";
 import { clothingDb } from "../../js/products";
@@ -7,27 +7,18 @@ const ProductDetails = () => {
   const location = useLocation();
   const { product } = location.state || {};
 
-  useEffect(() => {
-    const handleBeforeUnload = () => {
-      sessionStorage.setItem("scrollPosition", window.pageYOffset.toString());
-    };
+  if (!product) {
+    // Handle the case where location.state or product is undefined
+    return (
+      <div>
+        <p>Product details not found!</p>
+        {/* You can add a link or other content to redirect users */}
+        <Link to="/">Go back to Home</Link>
+      </div>
+    );
+  }
 
-    window.addEventListener("beforeunload", handleBeforeUnload);
-
-    return () => {
-      window.removeEventListener("beforeunload", handleBeforeUnload);
-    };
-  }, []);
-
-  useEffect(() => {
-    const scrollPosition = sessionStorage.getItem("scrollPosition");
-    if (scrollPosition) {
-      window.scrollTo(0, parseInt(scrollPosition, 10));
-    } else {
-      window.scrollTo(0, 0);
-    }
-  }, []);
-
+  // Extracting product details
   const {
     listed,
     user: {
@@ -41,10 +32,7 @@ const ProductDetails = () => {
     title,
     price,
     details: { imageUrl, description, condition, brand, model, category },
-    // location: loc,
   } = product;
-  console.log(product);
-  console.log(isVerified);
 
   return (
     <div className="product-details">
