@@ -95,7 +95,10 @@
       &:hover {
         transform: scale(1.05);
       }
-      // background: red;
+
+      &__image {
+        object-fit: cover;
+      }
 
       &__inner {
         display: flex;

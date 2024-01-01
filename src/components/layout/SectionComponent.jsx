@@ -38,10 +38,18 @@ const SectionComponent = ({
             <Link
               to={`/product/${item.id}`}
               key={item.id}
-              state={{ product: item }}
+              state={{
+                product: item,
+              }}
             >
               <article className="product-item" key={item.id}>
-                <img src={item.imageUrl} alt="" />
+                <img
+                  className="product-item__image"
+                  src={item.details.imageUrl}
+                  width={300}
+                  height={200}
+                  alt=""
+                />
                 <div className="product-item__inner">
                   <h2>{item.title}</h2>
                   <p>{item.price}</p>
