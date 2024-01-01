@@ -1,33 +1,31 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useLocation, Link } from "react-router-dom";
 import SectionComponent from "./SectionComponent";
 import { clothingDb } from "../../js/products";
 
 const ProductDetails = () => {
-  //   const { id } = useParams();
   const location = useLocation();
-  const { product } = location.state;
+  let product = location.state ? location.state.product : null;
 
+  // Save currently viewed product to local storage
   useEffect(() => {
-    if (!product) {
-      // Handle the case where product is null
-      // For example, you can redirect to the home page
-      window.location.href = "/"; // Redirect to the home page
-      // Or load content from localStorage if required
-      // const savedProduct = JSON.parse(localStorage.getItem("savedProduct"));
-      // Perform actions with savedProduct...
+    if (product) {
+      localStorage.setItem("lastViewedProduct", JSON.stringify(product));
     }
   }, [product]);
 
+  // If product is null, try to load the last viewed product from local storage
   if (!product) {
-    // If still no product after redirecting, render a message or link
-    return (
-      <div>
-        <p>Product details not found!</p>
-        {/* You can add a link or other content to redirect users */}
-        <Link to="/">Go back to Home</Link>
-      </div>
+    const lastViewedProduct = JSON.parse(
+      localStorage.getItem("lastViewedProduct")
     );
+    product = lastViewedProduct || null;
+  }
+
+  if (!product) {
+    // If product is still null, redirect to the homepage
+    window.location.href = "/";
+    return null; // This line is necessary to avoid further rendering
   }
 
   const {
