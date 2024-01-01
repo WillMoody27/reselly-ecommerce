@@ -1,12 +1,33 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useLocation, Link } from "react-router-dom";
 import SectionComponent from "./SectionComponent";
 import { clothingDb } from "../../js/products";
 
 const ProductDetails = () => {
-  //   const { id } = useParams();
   const location = useLocation();
-  const { product } = location.state;
+  const { product } = location.state || {};
+
+  useEffect(() => {
+    const handleBeforeUnload = () => {
+      sessionStorage.setItem("scrollPosition", window.pageYOffset.toString());
+    };
+
+    window.addEventListener("beforeunload", handleBeforeUnload);
+
+    return () => {
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+    };
+  }, []);
+
+  useEffect(() => {
+    const scrollPosition = sessionStorage.getItem("scrollPosition");
+    if (scrollPosition) {
+      window.scrollTo(0, parseInt(scrollPosition, 10));
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, []);
+
   const {
     listed,
     user: {
