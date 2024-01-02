@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useLocation, Link } from "react-router-dom";
 import SectionComponent from "../product/SectionProducts";
 import { sections } from "../../../../js/products";
@@ -43,7 +43,7 @@ const ProductDetails = () => {
     },
     title,
     price,
-    details: { imageUrl, description, condition, brand, model, category },
+    details: { imageUrl, category },
   } = product;
   console.log(product);
   console.log(isVerified);
