@@ -1,30 +1,35 @@
 import React from "react";
-import { electronicsDb, clothingDb } from "../../../../js/products";
+// import { electronicsDb, clothingDb } from "../../../../js/products";
+import { sections } from "../../../../js/products";
 
+// CSS
 import "./ProductSection.css";
 
 import SectionProducts from "../product/SectionProducts";
 
-const ProductSection = () => {
-  console.log(electronicsDb);
+/**
+ * @function ProductSection
+ * @description A component that renders the product sections
+ * **/
 
+const ProductSection = () => {
   return (
     <>
-      {/* Electronics Section */}
-      <SectionProducts
-        sectionHeader={"Electronics"}
-        sectionName="Level Up Your Gear"
-        dbItems={electronicsDb}
-        bgColor={"#000000"}
-      />
-      {/* Electronics Section */}
-      <SectionProducts
-        sectionHeader={"Clothing & Attire"}
-        sectionName="Looking For A New Fit?"
-        sectionMsg={"New Styles From Top Sellers Uploaded Daily!"}
-        dbItems={clothingDb}
-        bgColor={"#3C3C3C"}
-      />
+      {/* Dynamically Load Section For Electronics and Clothing & Attire -> D.R.Y */}
+      {sections.map((section) => (
+        <SectionProducts
+          key={section.id}
+          id={section.id}
+          className={section.className}
+          style={{
+            backgroundColor: `${section.backgroundColor}`,
+          }}
+          sectionHeader={section.sectionHeader}
+          sectionName={section.sectionName}
+          sectionMsg={section.sectionMsg}
+          dbItems={section.dbItems}
+        />
+      ))}
     </>
   );
 };

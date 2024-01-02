@@ -9,6 +9,7 @@ const SectionComponent = ({
   sectionMsg,
   bgColor,
   dbItems,
+  ...props // pass in the rest of the props
 }) => {
   const location = useLocation();
 
@@ -17,13 +18,7 @@ const SectionComponent = ({
   }, [location]);
 
   return (
-    <div
-      id="products"
-      className={`product-section`}
-      style={{
-        backgroundColor: `${bgColor}`,
-      }}
-    >
+    <div {...props}>
       <h2 className="product-section__title">{sectionHeader}</h2>
       <div className="product-section__container">
         <div className="section--meta">

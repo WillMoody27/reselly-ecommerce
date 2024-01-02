@@ -1,4 +1,7 @@
-export const electronicsDb = [
+/**
+ * @description Mock database for products
+ * **/
+const electronicsDb = [
   {
     id: 1,
     listed: "1 day ago",
@@ -202,7 +205,7 @@ export const electronicsDb = [
   },
 ];
 
-export const clothingDb = [
+const clothingDb = [
   {
     id: 1,
     listed: "1 day ago",
@@ -369,5 +372,28 @@ export const clothingDb = [
       category: ["Clothing", "Dress", "Wool"],
     },
     location: "Los Angeles, CA",
+  },
+];
+
+/**
+ * @description Sections for products
+ * **/
+export const sections = [
+  {
+    id: "electronics-section",
+    className: "product-section",
+    backgroundColor: "#000000",
+    sectionHeader: "Electronics",
+    sectionName: "Level Up Your Gear",
+    dbItems: electronicsDb, // mockDb
+  },
+  {
+    id: "clothing-section",
+    className: "product-section",
+    backgroundColor: "#3C3C3C",
+    sectionHeader: "Clothing & Attire",
+    sectionName: "Looking For A New Fit?",
+    sectionMsg: "New Styles From Top Sellers Uploaded Daily!",
+    dbItems: clothingDb, // mockDb
   },
 ];

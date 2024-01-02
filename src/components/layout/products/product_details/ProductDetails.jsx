@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import { useLocation, Link } from "react-router-dom";
 import SectionComponent from "../product/SectionProducts";
-import { clothingDb } from "../../../../js/products";
+// import { clothingDb } from "../../../../js/products";
+import { sections } from "../../../../js/products";
 
 // CSS
 import "./ProductDetails.css";
@@ -178,12 +179,12 @@ const ProductDetails = () => {
         </div>
       </div>
 
+      {/* Render Clothing & Attire Section Using Spread Operator */}
       <SectionComponent
-        sectionHeader={"Clothing & Attire"}
-        sectionName="Looking For A New Fit?"
-        sectionMsg={"New Styles From Top Sellers Uploaded Daily!"}
-        dbItems={clothingDb}
-        bgColor={"#3C3C3C"}
+        {...sections[1]}
+        style={{
+          backgroundColor: `${sections[1].backgroundColor}`,
+        }}
       />
     </div>
   );

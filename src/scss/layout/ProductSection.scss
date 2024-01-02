@@ -4,7 +4,6 @@
 .product-section {
   color: $white-color;
   padding: 2rem 0 2rem 2rem;
-  background: green !important;
   @media screen and (max-width: 1140px) {
     padding: 2rem 0;
   }
@@ -14,7 +13,6 @@
     font-size: 2rem;
     font-weight: 500;
     padding-left: 1rem;
-    // background: red;
   }
   &__container {
     overflow: hidden;
@@ -23,15 +21,12 @@
     @media screen and (max-width: 1140px) {
       flex-direction: column;
       gap: 2rem;
-      // background-color: red;
       padding: 0 1rem;
     }
 
     .section--meta {
-      //   background: red;
       margin: auto;
       padding-left: 1rem;
-      //   background: red;
       display: flex;
       flex-direction: column;
       gap: 2.5rem;
@@ -45,7 +40,6 @@
       .view-more--link {
         margin-right: auto;
         text-align: left;
-        // background: blue;
         font-weight: 300;
         font-size: 1.5rem;
         border-bottom: 1px solid $white-color;
@@ -76,15 +70,14 @@
     overflow-x: auto;
     width: 100%;
     margin: 1rem 0;
-    scrollbar-width: none; /* Hides scrollbar in Firefox */
-    -ms-overflow-style: none; /* Hides scrollbar in IE and Edge */
-
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     @media screen and (max-width: 1140px) {
       margin-bottom: 2rem;
     }
 
     &::-webkit-scrollbar {
-      display: none; /* Hides scrollbar in Chrome, Safari, and Opera */
+      display: none;
     }
 
     .product-item {
@@ -93,14 +86,17 @@
       margin-right: 20px;
       min-width: 250px;
       cursor: pointer;
-      transition: all 0.3s ease-in-out;
+      transition: all 0.15s ease-in-out;
+      border: 2px solid transparent;
+      border-radius: 10px;
 
       &:hover {
-        transform: scale(1.05);
+        border: 2px solid $white-color;
       }
 
       &__image {
         object-fit: cover;
+        border-radius: 10px;
       }
 
       &__inner {
