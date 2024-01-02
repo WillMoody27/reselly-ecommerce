@@ -1,5 +1,5 @@
 import React from "react";
-import "../..//../styles/layout/Copy.css";
+import "./Copy.css";
 
 const Copy = () => {
   return (
