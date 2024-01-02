@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+.hero__container {
+  color: #ffffff;
+  position: relative;
+  height: 100vh;
+  max-width: 1440px;
+}
+.hero__container .hero--left-content {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  text-align: center;
+  z-index: 100;
+}
+@media only screen and (max-width: 768px) {
+  .hero__container .hero--left-content {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    padding: 0 1rem;
+    font-size: 0.8rem;
+  }
+}
+.hero__container .hero--left-content__item--promo {
+  font-size: 1.2rem;
+  font-weight: 200;
+  color: yellow;
+}
+.hero__container .hero--left-content__item--name {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.hero__container .hero--left-content__item--condition-button {
+  display: flex;
+  padding: 0.5rem 1rem;
+  background: none;
+  border: 2px solid #ffffff;
+  font-weight: 200;
+  letter-spacing: 1px;
+  border-radius: 50px;
+  color: #ffffff;
+  margin: auto;
+  font-size: 1rem;
+}
+.hero__container .hero--left-content__message--cta {
+  font-size: 3.5em;
+  max-width: 700px;
+  font-weight: 900;
+  color: #ffffff;
+  margin: auto;
+}
+.hero__container .hero--left-content__item--link {
+  font-size: 2rem;
+  font-weight: 200;
+}
+.hero__container .hero--right-image {
+  object-fit: contain;
+  max-width: 100%;
+  min-width: 300px;
+  display: flex;
+  padding-top: 200px;
+  margin-left: auto;
+  opacity: 1;
+  transition: opacity 0.25s ease-in-out;
+}
+@media screen and (max-width: 1200px) {
+  .hero__container .hero--right-image {
+    opacity: 0.5;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero__container .hero--right-image {
+    margin-left: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 50;
+  }
+}
+
+/*# sourceMappingURL=Hero.css.map */

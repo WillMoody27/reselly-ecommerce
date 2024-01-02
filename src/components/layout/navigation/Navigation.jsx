@@ -7,6 +7,7 @@ import {
   faBagShopping,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "./Navigation.css";
 
 const Navigation = () => {
   const [show, setShow] = useState(false);

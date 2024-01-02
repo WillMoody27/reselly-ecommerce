@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./styles/Main.css";
 import Layout from "./components/layout/Layout";
 import ProductDetails from "./components/layout/ProductDetails";
-import Navigation from "./components/layout/Navigation";
+import Navigation from "../src/components/layout/navigation/Navigation";
 import Copy from "./components/layout/copy/Copy";
 
 function App() {

@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+.category {
+  background: #ffffff;
+  padding: 1rem 0;
+}
+.category__category--cards {
+  display: flex;
+  max-width: 900px;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 1rem auto;
+}
+.category__category--cards .category--title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+@media screen and (max-width: 1140px) {
+  .category__category--cards .category--title {
+    text-align: center;
+  }
+}
+.category__category--cards .category--image-container {
+  display: flex;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 900;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.category__category--cards .category--image-container .category--meta {
+  transition: all 0.25s ease-in-out;
+}
+.category__category--cards .category--image-container .category--meta:hover {
+  transform: scale(1.05);
+}
+@media screen and (max-width: 1140px) {
+  .category__category--cards .category--image-container {
+    gap: 1rem;
+  }
+}
+
+/*# sourceMappingURL=Category.css.map */

@@ -1,5 +1,6 @@
 import React from "react";
-import HeroImage from "../../assets/images/faded-camera-lens.png";
+import HeroImage from "../../../assets/images/faded-camera-lens.png";
+import "./Hero.css";
 
 const Hero = () => {
   return (

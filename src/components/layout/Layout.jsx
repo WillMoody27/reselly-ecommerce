@@ -1,6 +1,6 @@
 import React from "react";
-import Hero from "./Hero";
-import Category from "./Category";
+import Hero from "./hero/Hero";
+import Category from "./category/Category";
 import ProductSection from "./ProductSection";
 
 const Layout = () => {

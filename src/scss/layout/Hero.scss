@@ -1,7 +1,9 @@
+@import "../variables/colors";
+@import "../base/typography";
+
 .hero {
   // background: orange;
   &__container {
-    // background-color: red;
     color: $white-color;
     position: relative;
     height: 100vh;

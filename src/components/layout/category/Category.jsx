@@ -1,7 +1,8 @@
 import React from "react";
-import categoryImg1 from "../../assets/category-images/reselly-photography-img.png";
-import categoryImg2 from "../../assets/category-images/reselly-electronics-img.png";
-import categoryImg3 from "../../assets/category-images/reselly-software-img.png";
+import categoryImg1 from "../../../assets/category-images/reselly-photography-img.png";
+import categoryImg2 from "../../../assets/category-images/reselly-electronics-img.png";
+import categoryImg3 from "../../../assets/category-images/reselly-software-img.png";
+import "./Category.css";
 
 const Category = () => {
   return (
