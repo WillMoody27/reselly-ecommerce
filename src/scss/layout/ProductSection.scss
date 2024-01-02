@@ -1,7 +1,10 @@
+@import "../variables/colors";
+@import "../base/typography";
+
 .product-section {
   color: $white-color;
   padding: 2rem 0 2rem 2rem;
-  //   background: orangered;
+  background: green !important;
   @media screen and (max-width: 1140px) {
     padding: 2rem 0;
   }

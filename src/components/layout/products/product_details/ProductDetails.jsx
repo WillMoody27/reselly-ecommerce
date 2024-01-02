@@ -1,7 +1,10 @@
 import React, { useEffect } from "react";
 import { useLocation, Link } from "react-router-dom";
-import SectionComponent from "./SectionComponent";
-import { clothingDb } from "../../js/products";
+import SectionComponent from "../product/SectionProducts";
+import { clothingDb } from "../../../../js/products";
+
+// CSS
+import "./ProductDetails.css";
 
 const ProductDetails = () => {
   const location = useLocation();

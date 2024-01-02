@@ -1,10 +1,9 @@
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
-// get the data from export.js
-import { electronicsDb, clothingDb } from "../../js/products";
+import { electronicsDb, clothingDb } from "../../../../js/products";
 
-import SectionComponent from "./SectionComponent";
+import "./ProductSection.css";
+
+import SectionProducts from "../product/SectionProducts";
 
 const ProductSection = () => {
   console.log(electronicsDb);
@@ -12,14 +11,14 @@ const ProductSection = () => {
   return (
     <>
       {/* Electronics Section */}
-      <SectionComponent
+      <SectionProducts
         sectionHeader={"Electronics"}
         sectionName="Level Up Your Gear"
         dbItems={electronicsDb}
         bgColor={"#000000"}
       />
       {/* Electronics Section */}
-      <SectionComponent
+      <SectionProducts
         sectionHeader={"Clothing & Attire"}
         sectionName="Looking For A New Fit?"
         sectionMsg={"New Styles From Top Sellers Uploaded Daily!"}

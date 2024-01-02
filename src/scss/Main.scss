@@ -1,19 +1,16 @@
 // Global Imports
 @import "./base/reset";
-@import "./variables/colors";
+
 // Typography
 @import "./base/typography";
 
-// Mixins
-@import "./mixins/mixins";
-
-// Layout Imports
-@import "./layout/Hero";
-@import "./layout/Navigation";
-@import "./layout/Category";
-@import "./layout/ProductDetails";
-@import "./layout/ProductSection";
-@import "./layout/Copy.scss";
+// // Layout Imports
+// @import "./layout/Hero";
+// @import "./layout/Navigation";
+// @import "./layout/Category";
+// @import "./layout/ProductDetails";
+// @import "./layout/ProductSection";
+// @import "./layout/Copy.scss";
 
 html {
   scroll-behavior: smooth;

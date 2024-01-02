@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+.product-section {
+  color: #ffffff;
+  padding: 2rem 0 2rem 2rem;
+  background: green !important;
+}
+@media screen and (max-width: 1140px) {
+  .product-section {
+    padding: 2rem 0;
+  }
+}
+.product-section__title {
+  margin: 1rem auto;
+  font-size: 2rem;
+  font-weight: 500;
+  padding-left: 1rem;
+}
+.product-section__container {
+  overflow: hidden;
+  display: flex;
+}
+@media screen and (max-width: 1140px) {
+  .product-section__container {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+}
+.product-section__container .section--meta {
+  margin: auto;
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+@media screen and (max-width: 1140px) {
+  .product-section__container .section--meta {
+    gap: 1rem;
+    margin-top: 2rem;
+    text-align: center;
+  }
+}
+.product-section__container .section--meta .view-more--link {
+  margin-right: auto;
+  text-align: left;
+  font-weight: 300;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #ffffff;
+}
+@media screen and (max-width: 1140px) {
+  .product-section__container .section--meta .view-more--link {
+    margin-right: 0;
+    margin: auto;
+  }
+}
+.product-section__container .section--meta .section--message {
+  font-size: 2.5rem;
+  font-weight: 900;
+  max-width: 300px;
+}
+@media screen and (max-width: 1140px) {
+  .product-section__container .section--meta .section--message {
+    max-width: 100%;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+.product-section .product-slider {
+  padding: 1rem;
+  margin-left: 1rem;
+  display: flex;
+  overflow-x: auto;
+  width: 100%;
+  margin: 1rem 0;
+  scrollbar-width: none; /* Hides scrollbar in Firefox */
+  -ms-overflow-style: none; /* Hides scrollbar in IE and Edge */
+}
+@media screen and (max-width: 1140px) {
+  .product-section .product-slider {
+    margin-bottom: 2rem;
+  }
+}
+.product-section .product-slider::-webkit-scrollbar {
+  display: none; /* Hides scrollbar in Chrome, Safari, and Opera */
+}
+.product-section .product-slider .product-item {
+  flex: 0 0 auto;
+  padding: 10px;
+  margin-right: 20px;
+  min-width: 250px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.product-section .product-slider .product-item:hover {
+  transform: scale(1.05);
+}
+.product-section .product-slider .product-item__image {
+  object-fit: cover;
+}
+.product-section .product-slider .product-item__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+.product-section .product-slider .product-item__inner .meta--location {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.product-section .product-slider .product-item__inner .button-container {
+  display: flex;
+  justify-content: space-between;
+}
+.product-section .product-slider .product-item__inner .button-container .button {
+  padding: 0.5rem 1rem;
+  background: none;
+  border: 2px solid #ffffff;
+  font-weight: 200;
+  letter-spacing: 1px;
+  border-radius: 10px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=ProductSection.css.map */
