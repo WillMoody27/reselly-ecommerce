@@ -270,11 +270,11 @@
 
     .product--meta {
       margin-top: 2rem;
-      &__condition,
-      &__brand,
-      &__model,
-      &__description,
+
+      // Product Details
+      &__text,
       &__category {
+        background: red;
         display: flex;
         gap: 1rem;
         margin: 0.5rem 0;

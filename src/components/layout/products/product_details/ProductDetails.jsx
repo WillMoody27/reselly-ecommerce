@@ -1,11 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useLocation, Link } from "react-router-dom";
 import SectionComponent from "../product/SectionProducts";
-// import { clothingDb } from "../../../../js/products";
 import { sections } from "../../../../js/products";
 
 // CSS
 import "./ProductDetails.css";
+import ItemDetails from "./item_details/ItemDetails";
 
 const ProductDetails = () => {
   const location = useLocation();
@@ -18,7 +18,7 @@ const ProductDetails = () => {
     }
   }, [product]);
 
-  // If product is null, try to load the last viewed product from local storage
+  // If product is null, try to load the last viewed product from local storage else redirect to the homepage
   if (!product) {
     const lastViewedProduct = JSON.parse(
       localStorage.getItem("lastViewedProduct")
@@ -27,9 +27,8 @@ const ProductDetails = () => {
   }
 
   if (!product) {
-    // If product is still null, redirect to the homepage
     window.location.href = "/";
-    return null; // This line is necessary to avoid further rendering
+    return null;
   }
 
   const {
@@ -45,7 +44,6 @@ const ProductDetails = () => {
     title,
     price,
     details: { imageUrl, description, condition, brand, model, category },
-    // location: loc,
   } = product;
   console.log(product);
   console.log(isVerified);
@@ -141,22 +139,10 @@ const ProductDetails = () => {
           <img className="product--image" src={imageUrl} alt="" />
           <div className="product--meta">
             <h3>Item Details</h3>
-            <div className="product--meta__condition">
-              <span>Condition</span>
-              <span>{condition}</span>
-            </div>
-            <div className="product--meta__brand">
-              <span>Brand</span>
-              <span>{brand}</span>
-            </div>
-            <div className="product--meta__model">
-              <span>Model</span>
-              <span>{model}</span>
-            </div>
-            <div className="product--meta__description">
-              <span>Description</span>
-              <span>{description}</span>
-            </div>
+            <ItemDetails
+              className="product--meta__text"
+              details={product.details}
+            />
             <div className="product--meta__category">
               <span>Category</span>
               <div className="product--meta__category__inner--tags">

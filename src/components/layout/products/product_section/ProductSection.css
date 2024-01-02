@@ -124,5 +124,9 @@
   color: #ffffff;
   cursor: pointer;
 }
+.product-section .product-slider .product-item__inner .button-container .button:hover {
+  background: #ffffff;
+  color: #222222;
+}
 
 /*# sourceMappingURL=ProductSection.css.map */

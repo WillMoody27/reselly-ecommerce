@@ -54,8 +54,28 @@ const SectionComponent = ({
                     {item.location}
                   </p>
                   <div className="button-container">
-                    <button className="button">Contact Seller</button>
-                    <button className="button">Buy Now</button>
+                    <Link
+                      to={{
+                        pathname: "/contact",
+                        state: {
+                          product: item,
+                        },
+                      }}
+                      className="button"
+                    >
+                      Contact Seller
+                    </Link>
+                    <Link
+                      to={{
+                        pathname: "/cart",
+                        state: {
+                          product: item,
+                        },
+                      }}
+                      className="button"
+                    >
+                      Buy Now
+                    </Link>
                   </div>
                 </div>
               </article>

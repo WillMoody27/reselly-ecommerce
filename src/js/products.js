@@ -1,3 +1,7 @@
+import categoryImg1 from "../assets/category-images/reselly-photography-img.png";
+import categoryImg2 from "../assets/category-images/reselly-electronics-img.png";
+import categoryImg3 from "../assets/category-images/reselly-software-img.png";
+
 /**
  * @description Mock database for products
  * **/
@@ -29,10 +33,10 @@ const electronicsDb = [
       // imageUrl: "https://via.placeholder.com/300x200",
       imageUrl:
         "https://images.pexels.com/photos/5721908/pexels-photo-5721908.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      description: "65' Display • 4K • 120Hz",
       condition: "Like New",
       brand: "Samsung",
       model: "QLED",
+      description: "65' Display • 4K • 120Hz",
       category: ["Electronics", "TVs", "4K"],
     },
     location: "Denver, CO",
@@ -63,10 +67,10 @@ const electronicsDb = [
     details: {
       imageUrl:
         "https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      description: "Full Frame Mirrorless Camera",
       condition: "Like New",
       brand: "Canon",
       model: "EOS R155",
+      description: "Full Frame Mirrorless Camera",
       category: ["Electronics", "Cameras", "Mirrorless"],
     },
     location: "Denver, CO",
@@ -96,10 +100,10 @@ const electronicsDb = [
     price: "$150.00",
     details: {
       imageUrl: "https://via.placeholder.com/300x200",
-      description: "Noise Cancelling Headphones",
       condition: "Like New",
       brand: "Sony",
       model: "WH-1000XM3",
+      description: "Noise Cancelling Headphones",
       category: ["Electronics", "Headphones", "Wireless"],
     },
     location: "San Francisco, CA",
@@ -129,10 +133,10 @@ const electronicsDb = [
     price: "$1,200.00",
     details: {
       imageUrl: "https://via.placeholder.com/300x200",
-      description: "15' Display • 16GB RAM • 512GB SSD",
       condition: "Like New",
       brand: "Dell",
       model: "XPS 15",
+      description: "15' Display • 16GB RAM • 512GB SSD",
       category: ["Electronics", "Laptops", "Windows"],
     },
     location: "Seattle, WA",
@@ -162,10 +166,10 @@ const electronicsDb = [
     price: "$300.00",
     details: {
       imageUrl: "https://via.placeholder.com/300x200",
-      description: "32GB • Red/Blue Joycons",
       condition: "Like New",
       brand: "Nintendo",
       model: "Switch",
+      description: "32GB • Red/Blue Joycons",
       category: ["Electronics", "Gaming", "Console"],
     },
     location: "Chicago, IL",
@@ -195,10 +199,10 @@ const electronicsDb = [
     price: "$250.00",
     details: {
       imageUrl: "https://via.placeholder.com/300x200",
-      description: "Dolby Atmos • 500W",
       condition: "Like New",
       brand: "LG",
       model: "SK9Y",
+      description: "Dolby Atmos • 500W",
       category: ["Electronics", "Speakers", "Soundbar"],
     },
     location: "Miami, FL",
@@ -233,10 +237,10 @@ const clothingDb = [
       // imageUrl: "https://via.placeholder.com/300x200",
       imageUrl:
         "https://images.pexels.com/photos/45982/pexels-photo-45982.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      description: "Lorem ipsum dolor sit amet, consect.",
       condition: "Like New",
       brand: "H&M",
       model: "Sweater",
+      description: "Lorem ipsum dolor sit amet, consect.",
       category: ["Clothing", "Sweaters", "Wool"],
     },
     location: "Denver, CO",
@@ -266,10 +270,10 @@ const clothingDb = [
     price: "$50.00",
     details: {
       imageUrl: "https://via.placeholder.com/300x200",
-      description: "Lorem ipsum dolor sit amet, consect.",
       condition: "Like New",
       brand: "H&M",
       model: "Outfit",
+      description: "Lorem ipsum dolor sit amet, consect.",
       category: ["Clothing", "Outfit", "Wool"],
     },
     location: "Denver, CO",
@@ -299,10 +303,10 @@ const clothingDb = [
     price: "$45.00",
     details: {
       imageUrl: "https://via.placeholder.com/300x200",
-      description: "Lorem ipsum dolor sit amet, consect.",
       condition: "Like New",
       brand: "H&M",
       model: "Jacket",
+      description: "Lorem ipsum dolor sit amet, consect.",
       category: ["Clothing", "Jacket", "Wool"],
     },
     location: "Denver, CO",
@@ -332,10 +336,10 @@ const clothingDb = [
     price: "$80.00",
     details: {
       imageUrl: "https://via.placeholder.com/300x200",
-      description: "Lorem ipsum dolor sit amet, consect.",
       condition: "Like New",
       brand: "H&M",
       model: "Jacket",
+      description: "Lorem ipsum dolor sit amet, consect.",
       category: ["Clothing", "Jacket", "Wool"],
     },
     location: "New York, NY",
@@ -365,10 +369,10 @@ const clothingDb = [
     price: "$55.00",
     details: {
       imageUrl: "https://via.placeholder.com/300x200",
-      description: "Lorem ipsum dolor sit amet, consect.",
       condition: "Like New",
       brand: "H&M",
       model: "Dress",
+      description: "Lorem ipsum dolor sit amet, consect.",
       category: ["Clothing", "Dress", "Wool"],
     },
     location: "Los Angeles, CA",
@@ -396,4 +400,29 @@ export const sections = [
     sectionMsg: "New Styles From Top Sellers Uploaded Daily!",
     dbItems: clothingDb, // mockDb
   },
+];
+
+export const categories = [
+  {
+    id: 1,
+    categoryName: "Photography",
+    image: categoryImg1,
+  },
+  {
+    id: 2,
+    categoryName: "Electronics",
+    image: categoryImg2,
+  },
+  {
+    id: 3,
+    categoryName: "Software",
+    image: categoryImg3,
+  },
+];
+
+export const productDetailsHeader = [
+  "condition",
+  "brand",
+  "model",
+  "description",
 ];

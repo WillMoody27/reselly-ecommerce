@@ -33,7 +33,7 @@
   transition: all 0.25s ease-in-out;
 }
 .category__category--cards .category--image-container .category--meta:hover {
-  transform: scale(1.05);
+  opacity: 0.8;
 }
 @media screen and (max-width: 1140px) {
   .category__category--cards .category--image-container {
