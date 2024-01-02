@@ -72,13 +72,20 @@ const Navigation = () => {
 
           {/* Cart button */}
           <div className="bottom--content__shopping--bag">
-            <button className="shopping--button" type="button">
-              <span className="cart-count">2</span>
-              <FontAwesomeIcon
-                className="shopping--btn__shopping--bag"
-                icon={faBagShopping}
-              />
-            </button>
+            <Link
+              className="shopping--bag__link"
+              to={{
+                pathname: "/cart",
+              }}
+            >
+              <button className="shopping--button" type="button">
+                <span className="cart-count">2</span>
+                <FontAwesomeIcon
+                  className="shopping--btn__shopping--bag"
+                  icon={faBagShopping}
+                />
+              </button>
+            </Link>
           </div>
           {/* Cart button */}
         </div>

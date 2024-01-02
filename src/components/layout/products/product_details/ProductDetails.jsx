@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import { useLocation, Link } from "react-router-dom";
 import SectionComponent from "../product/SectionProducts";
+// Import sections from products.js
 import { sections } from "../../../../js/products";
-
+import ItemDetails from "./item_details/ItemDetails";
 // CSS
 import "./ProductDetails.css";
-import ItemDetails from "./item_details/ItemDetails";
 
 const ProductDetails = () => {
   const location = useLocation();
@@ -83,13 +83,30 @@ const ProductDetails = () => {
             </div>
             <div className="button-container">
               <button className="cart-button">Add to Cart</button>
-              <button className="button">Buy Now</button>
+              {/* <button className="button">Buy Now</button> */}
+              <Link
+                className="buy-now--button"
+                to={{
+                  pathname: "/cart",
+                }}
+              >
+                Buy Now
+              </Link>
+
               <div className="checkout--divider-or">
                 <p>or</p>
               </div>
-              <button className="button">
+              {/* <button className="paypal--button">
                 PayPal <span>Checkout</span>
-              </button>
+              </button> */}
+              <Link
+                className="paypal--button"
+                to={{
+                  pathname: "/cart",
+                }}
+              >
+                PayPal <span>Checkout</span>
+              </Link>
             </div>
             <p className="legal--content">
               *By continuing to checkout, you agree to the RESELL’s{" "}
@@ -139,10 +156,12 @@ const ProductDetails = () => {
           <img className="product--image" src={imageUrl} alt="" />
           <div className="product--meta">
             <h3>Item Details</h3>
+            {/* Item Listing Details */}
             <ItemDetails
               className="product--meta__text"
               details={product.details}
             />
+            {/* Item Listing Details */}
             <div className="product--meta__category">
               <span>Category</span>
               <div className="product--meta__category__inner--tags">

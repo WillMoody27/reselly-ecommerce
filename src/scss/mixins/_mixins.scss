@@ -2,3 +2,15 @@
   font-size: $fontSize;
   letter-spacing: $letterSpacing;
 }
+
+@mixin buttonStyles {
+  text-align: center;
+  margin: auto;
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  font-size: 1.2em;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-right: auto;
+  transition: all 0.25s ease-in-out;
+}

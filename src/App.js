@@ -6,7 +6,8 @@ import "./styles/Main.css";
 import Layout from "./components/layout/Layout";
 import ProductDetails from "./components/layout/products/product_details/ProductDetails";
 import Navigation from "../src/components/layout/navigation/Navigation";
-import Copy from "./components/layout/copy/Copy";
+import Cart from "./components/layout/checkout/cart";
+import Footer from "./components/layout/copy/Footer";
 
 function App() {
   return (
@@ -16,9 +17,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />} />
           <Route path="/product/:id" element={<ProductDetails />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
       </div>
-      <Copy />
+      <Footer />
     </Router>
   );
 }

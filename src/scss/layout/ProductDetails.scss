@@ -1,5 +1,11 @@
 @import "../variables/colors";
 @import "../base/typography";
+@import "../mixins/mixins";
+
+// Local Variables
+$link-color: #0055ff;
+$border-color: #000000;
+$button-bg-color: $black-color;
 
 .product-details {
   background: $white-color;
@@ -10,8 +16,8 @@
   overflow-x: hidden;
 
   &__spacer {
-    height: 122.09px; // Takes into account the height of the navigation
-    background: green;
+    height: 122.09px;
+    background: red !important;
   }
 
   &__container {
@@ -27,7 +33,6 @@
       margin-left: 0;
       padding-left: 0;
       gap: 2rem;
-      // background-color: red;
     }
   }
 
@@ -58,7 +63,7 @@
         font-size: 0.8rem;
         font-weight: 400;
         // link color blue
-        color: #0055ff;
+        color: $link-color;
         text-decoration: underline;
       }
 
@@ -71,7 +76,7 @@
         color: $black-color;
 
         .legal--content__link {
-          color: #0055ff;
+          color: $link-color;
           text-decoration: underline;
         }
       }
@@ -95,7 +100,7 @@
         .cart-button {
           width: 200px;
           background: none;
-          border: 2px solid $black-color;
+          border: 2px solid $border-color;
 
           // Same Styles
           margin: auto;
@@ -141,31 +146,22 @@
           }
         }
 
-        .button {
+        .buy-now--button,
+        .paypal--button {
           width: 250px;
           border: none;
           background: $black-color;
           color: $white-color;
-
-          // Same Styles
-          margin: auto;
-          padding: 0.7rem 1rem;
-          border-radius: 10px;
-          font-size: 1.2em;
-          font-weight: 200;
-          letter-spacing: 1px;
-          margin-right: auto;
-          transition: all 0.25s ease-in-out;
-
-          // PayPal Button
-          &:nth-child(4) {
-            font-style: italic;
-            font-weight: 600;
-            span {
-              font-style: normal;
-              font-size: 0.8rem;
-              font-weight: 200;
-            }
+          @include buttonStyles;
+        }
+        // PayPal Button
+        .paypal--button:nth-child(4) {
+          font-style: italic;
+          font-weight: 600;
+          span {
+            font-style: normal;
+            font-size: 0.8rem;
+            font-weight: 200;
           }
 
           &:hover {
@@ -177,7 +173,6 @@
     }
 
     .user {
-      //   background: orange;
       margin-top: 5rem;
       &__wrapper {
         display: flex;
@@ -196,7 +191,6 @@
         }
 
         .user--meta {
-          // background: blue;
           display: flex;
           flex-direction: column;
           gap: 0.8rem;
@@ -213,11 +207,11 @@
 
             // add border before the first item
             p:nth-child(2) {
-              border-left: 1.5px solid $black-color;
+              border-left: 1.5px solid $border-color;
               padding-left: 0.2rem;
             }
             p:nth-child(3) {
-              border-left: 1.5px solid $black-color;
+              border-left: 1.5px solid $border-color;
               padding-left: 0.2rem;
             }
           }
@@ -226,7 +220,7 @@
             color: $black-color;
             padding: 0.5rem 1rem;
             border-radius: 10px;
-            border: 2px solid $black-color;
+            border: 2px solid $border-color;
             font-size: 1.2em;
             font-weight: 200;
             letter-spacing: 1px;
@@ -274,7 +268,7 @@
       // Product Details
       &__text,
       &__category {
-        background: red;
+        text-transform: capitalize;
         display: flex;
         gap: 1rem;
         margin: 0.5rem 0;

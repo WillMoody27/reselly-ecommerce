@@ -6,9 +6,9 @@ const Copy = () => {
     <>
       <p className="copy">
         <a href="https://github.com/WillMoody27">
-          <p>Made with SASS + REACTjs | Designed by William HM 👨🏾‍💻</p>
+          <p>Designed by William HM 👨🏾‍💻</p>
         </a>
-        &copy; 2024 Copyright William Hellems-Moody | All Rights Reserved
+        &copy; 2024 Copyright Reselly | All Rights Reserved
       </p>
     </>
   );

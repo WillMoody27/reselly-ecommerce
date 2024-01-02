@@ -1,0 +1,24 @@
+@import "../variables/colors";
+
+$view-width: 100vw;
+$view-height: 100vh;
+
+.reselly-cart {
+  display: flex;
+  flex-direction: column;
+  width: $view-width;
+  height: $view-height;
+
+  // Make Component
+  &__spacer {
+    height: 122.09px;
+  }
+  &__container {
+    width: $view-width;
+    background: $white-color;
+    height: calc(100% - 122.09px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

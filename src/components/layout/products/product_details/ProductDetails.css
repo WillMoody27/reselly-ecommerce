@@ -9,7 +9,7 @@
 }
 .product-details__spacer {
   height: 122.09px;
-  background: green;
+  background: red !important;
 }
 .product-details__container {
   height: calc(100% - 122.09px);
@@ -84,7 +84,7 @@
 .product-details__container--left .listing--content .button-container .cart-button {
   width: 200px;
   background: none;
-  border: 2px solid #222222;
+  border: 2px solid #000000;
   margin: auto;
   padding: 0.5rem 1rem;
   border-radius: 10px;
@@ -123,30 +123,32 @@
   background: #222222;
   margin-left: 0.5rem;
 }
-.product-details__container--left .listing--content .button-container .button {
+.product-details__container--left .listing--content .button-container .buy-now--button,
+.product-details__container--left .listing--content .button-container .paypal--button {
   width: 250px;
   border: none;
   background: #222222;
   color: #ffffff;
+  text-align: center;
   margin: auto;
   padding: 0.7rem 1rem;
   border-radius: 10px;
   font-size: 1.2em;
-  font-weight: 200;
+  font-weight: 400;
   letter-spacing: 1px;
   margin-right: auto;
   transition: all 0.25s ease-in-out;
 }
-.product-details__container--left .listing--content .button-container .button:nth-child(4) {
+.product-details__container--left .listing--content .button-container .paypal--button:nth-child(4) {
   font-style: italic;
   font-weight: 600;
 }
-.product-details__container--left .listing--content .button-container .button:nth-child(4) span {
+.product-details__container--left .listing--content .button-container .paypal--button:nth-child(4) span {
   font-style: normal;
   font-size: 0.8rem;
   font-weight: 200;
 }
-.product-details__container--left .listing--content .button-container .button:hover {
+.product-details__container--left .listing--content .button-container .paypal--button:nth-child(4):hover {
   transform: scale(1.05);
 }
 .product-details__container--left .user {
@@ -182,11 +184,11 @@
   font-size: 0.9rem;
 }
 .product-details__container--left .user__wrapper .user--meta .user--details p:nth-child(2) {
-  border-left: 1.5px solid #222222;
+  border-left: 1.5px solid #000000;
   padding-left: 0.2rem;
 }
 .product-details__container--left .user__wrapper .user--meta .user--details p:nth-child(3) {
-  border-left: 1.5px solid #222222;
+  border-left: 1.5px solid #000000;
   padding-left: 0.2rem;
 }
 .product-details__container--left .user__wrapper .user--meta .view-shop--btn {
@@ -194,7 +196,7 @@
   color: #222222;
   padding: 0.5rem 1rem;
   border-radius: 10px;
-  border: 2px solid #222222;
+  border: 2px solid #000000;
   font-size: 1.2em;
   font-weight: 200;
   letter-spacing: 1px;
@@ -234,7 +236,7 @@
   margin-top: 2rem;
 }
 .product-details__container--right .product--meta__text, .product-details__container--right .product--meta__category {
-  background: red;
+  text-transform: capitalize;
   display: flex;
   gap: 1rem;
   margin: 0.5rem 0;
