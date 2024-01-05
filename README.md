@@ -18,6 +18,23 @@
 
 # [DEMO LINK](https://reselly-demo.williamhmoody.com/) --or-- [PORTFOLIO](https://williamhmoody.com/)
 
+## Dashboard + Dashboard w/Drop Menu
+
+<div style="text-align:center;">
+  <img src="./src/assets/wireframe/RESELLY - Dashboard.png" alt="drawing" width="300px"/>
+  <img src="./src/assets/wireframe/Dashboard - DASHBOARD DROP MENU.png" alt="drawing" width="300px"/>
+  <hr/>
+</div>
+
+## Listing Page + Checkout Page
+
+<div style="text-align:center;">
+  <img src="./src/assets/wireframe/RESELLY - CHECKOUT PAGE.png" alt="drawing" width="300px"/>
+  <img src="./src/assets/wireframe/Dashboard - LISTING PAGE.png" alt="drawing" width="300px"/>
+    <hr/>
+
+</div>
+
 ## Objective Of App
 
 The primary objective of reselly is to provide a platform for users to buy, sell, and trade items with other users. The app will allow users to create an account, post items for sale, and purchase items from other users. The aim is to create a simple, easy-to-use, and intuitive platform for buying, selling, and trading items with other users locally and nationwide.
