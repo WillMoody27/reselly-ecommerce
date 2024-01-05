@@ -59,6 +59,13 @@ User are able to visit other users' profiles and shops to view their items for s
 
 ## Methodology (Technologies Used, Deployment)
 
+### Design
+
+- Figma
+- Adobe Photoshop
+
+---
+
 ### Tech Stack
 
 ---
